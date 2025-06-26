@@ -1,0 +1,27 @@
+name: Super Linter
+
+
+on:
+  workflow_dispatch:
+
+jobs:
+  super-linter:
+    runs-on: ubuntu-latest
+
+    # permissions:
+    #   contents: read
+    #   packages: read
+    #   # To report GitHub Actions status checks
+    #   statuses: write
+
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      # with:
+      #   fetch-depth: 0
+    
+    # - name: Supper Lint Java 
+    #   uses: super-linter/super-linter@v7.4.0
+    #   env:
+    #     # To report GitHub Actions status checks
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
