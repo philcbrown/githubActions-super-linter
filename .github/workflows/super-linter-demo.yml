@@ -2,6 +2,8 @@ name: Super Linter
 
 
 on:
+  push:
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
@@ -14,14 +16,14 @@ jobs:
     #   # To report GitHub Actions status checks
     #   statuses: write
 
-  steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-      # with:
-      #   fetch-depth: 0
-    
-    # - name: Supper Lint Java 
-    #   uses: super-linter/super-linter@v7.4.0
-    #   env:
-    #     # To report GitHub Actions status checks
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        # with:
+        #   fetch-depth: 0
+      
+      # - name: Supper Lint Java 
+      #   uses: super-linter/super-linter@v7.4.0
+      #   env:
+      #     # To report GitHub Actions status checks
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
